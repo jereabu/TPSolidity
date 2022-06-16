@@ -1,6 +1,6 @@
 # TP Solidity
 Jeremias A
-Andres Chouela
+Andres C
 Opcionales:
 
 a. Se podria cambiar el mapping de las notas y 
