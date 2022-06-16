@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
-contract Colegio {
+contract Estudiante {
 
     // Declaramos variables
     string private _nombre;
@@ -21,7 +21,7 @@ contract Colegio {
     }
 
     //Devuelve el apellido del alumno
-    function getapellido() public view returns (string memory) {
+    function apellido() public view returns (string memory) {
         return _apellido;
     }
     // Append-eamos el nombre completo
@@ -31,12 +31,12 @@ contract Colegio {
 
 
     //Devuelve el nombre completo del alumno
-    function getnombre_completo() public view returns (string memory) {
+    function nombre_completo() public view returns (string memory) {
         return AppendString(_nombre, " ", _apellido);
     }
 
     //Devuelve el curso del alumno
-    function getcurso() public view returns (string memory) {
+    function curso() public view returns (string memory) {
         return _curso;
     }
 
@@ -49,13 +49,13 @@ contract Colegio {
     }
 
     //Devuelve la nota dependiendo la materia
-    function getnota_materia(string memory _materia) public view returns (uint) {
+    function nota_materia(string memory _materia) public view returns (uint) {
         uint _nota = notas_materia[_materia];   
         return _nota;
     }
     
     //Se fija si la nota de una cierta materia es mayor o igual a 60, devuelve true o false
-    function getaprobo(string memory _materia) public view returns (bool) {
+    function aprobo(string memory _materia) public view returns (bool) {
         if (notas_materia[_materia] >= 60){
             return true;
         } else {
@@ -64,7 +64,7 @@ contract Colegio {
        
     }
 
-    function getpromedio() public view returns (uint) {
+    function promedio() public view returns (uint) {
 
         uint _cantItems = _nom_materias.length;
         uint _notaParaPromedio;
